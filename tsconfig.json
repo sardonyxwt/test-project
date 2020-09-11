@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "allowJs": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        "lib": ["es2015", "dom"],
+        "baseUrl": ".",
+        "sourceRoot": "/",
+        "sourceMap": true,
+        "inlineSources": true,
+        "paths": {
+            "@source/*": ["./src/*"],
+            "@public/*": ["./public/*"]
+        }
+    },
+    "exclude": ["./webpack.config.js", "./dev-server-api.middleware.js"]
+}

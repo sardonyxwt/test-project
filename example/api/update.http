@@ -1,0 +1,8 @@
+PUT http://localhost:8080/api/tasks
+Content-Type: application/json
+
+{
+    "id": "1",
+    "body": "Create awesome app in world!",
+    "isComplete": true
+}

@@ -1,0 +1,17 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+**/node_modules
+
+# build
+**/report
+
+*.log*
+
+# editors files
+*.iml
+/.idea
+/.vscode
+
+# os files
+.DS_Store
