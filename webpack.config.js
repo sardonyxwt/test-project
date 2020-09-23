@@ -1,18 +1,14 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlPlugin = require('html-webpack-plugin');
-const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 const {
     default: createStyledComponentsTransformer,
 } = require('typescript-plugin-styled-components');
 const { apiMiddleware } = require('./dev-server-api.middleware');
 
-const isTs = fs.existsSync(`${__dirname}/src/index.ts`);
-
 module.exports = {
-    entry: [`./src/index.${isTs ? 't' : 'j'}s`],
+    entry: ['./src/index'],
     output: {
         filename: `js/[name].[hash].js`,
         chunkFilename: `js/[name].[hash].js`,
@@ -21,8 +17,7 @@ module.exports = {
     mode: 'development',
     stats: 'errors-only',
     resolve: {
-        extensions: ['.js', 'jsx', '.ts', '.tsx', '.scss', '.sass', '.json'],
-        plugins: [new TsconfigPathsPlugin()],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss', '.sass', '.json']
     },
     module: {
         rules: [
