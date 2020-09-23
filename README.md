@@ -13,4 +13,10 @@ Create ToDo list app using next [design](./design.jpg) and few rules:
     > [PUT: /api/tasks](./example/api/update.http) update exist task.  
     > [DELETE: /api/tasks/:id](./example/api/delete.http) delete exist task.
 
+NOTE: If you using javascript add .jsx extension at imports.
+
+```js
+import { App } from './app.component.jsx';
+```
+
 Good luck)
